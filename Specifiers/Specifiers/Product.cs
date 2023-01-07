@@ -23,29 +23,27 @@ public abstract class Product
         get { return _productStatus; }
         set { _productStatus = value; }
     }
-    public string ReturnProductName()
+    public string GetProductName()
     {
-        if (!CheckProductIsAvailable())
+        if (!IsProductAvailable())
         {
             return "Product is not available";
         }
         return ProductName ?? "";
     }
 
-    private bool CheckProductIsAvailable()
+    private bool IsProductAvailable()
     {
         return false;
     }
 
-    internal decimal? ReturnProductPrice()
+    protected virtual bool? GetProductStatus()
+    {
+        return _productStatus;
+    }
+    internal decimal? GetProductPrice()
     {
         return ProductPrice ?? 0;
     }
 
-    protected virtual bool? ReturnProductStatus()
-    {
-        return _productStatus;
-    }
-
-    
 }

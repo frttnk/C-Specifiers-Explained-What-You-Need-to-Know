@@ -2,9 +2,14 @@
 
 public class Computer : Product
 {
-
-    protected override bool? ReturnProductStatus()
+    protected override bool? GetProductStatus()
     {
-        return base.ReturnProductStatus();
+        return base.GetProductStatus();
     }
+
+    internal decimal? GetComputerPrice()
+    {
+        return ProductPrice;
+    }
+
 }
