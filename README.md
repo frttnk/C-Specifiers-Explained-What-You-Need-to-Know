@@ -324,12 +324,6 @@ The protectedInternal specifier is accessible at all levels within the project, 
 
 <br/>
 
-
-
-I have tried to explain the different types of specifiers in C# and why they are needed.
-
-
-
 > I did not include an example of the `protectedInternal` specifier because it is very similar to the `public` specifier. The only difference is that while the `public` specifier is accessible everywhere, including in other assemblies and external code, the `protectedInternal` specifier cannot be accessed by external code in other assemblies."
 
 <br/>
